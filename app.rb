@@ -18,8 +18,12 @@ get '/yahoo' do
   "this isnt yahoo either"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Alice", "Mary", "Tom"].sample
   erb :index
 end
 
+get '/named-cat' do
+  p @name = params[:name]
+  erb :index
+end
